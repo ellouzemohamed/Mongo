@@ -1,0 +1,320 @@
+MongoDB shell version v4.4.5-rc0
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("e86c910f-853a-4c1a-a132-33269787d714") }
+MongoDB server version: 4.4.5-rc0
+---
+The server generated these startup warnings when booting:
+        2021-04-03T00:16:30.532+02:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> mongo --db
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:8
+> mongo --version
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:8
+> show bs
+uncaught exception: Error: don't know how to show [bs] :
+shellHelper.show@src/mongo/shell/utils.js:1191:11
+shellHelper@src/mongo/shell/utils.js:819:15
+@(shellhelp2):1:1
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> mongo --version
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:8
+> mongo
+uncaught exception: ReferenceError: mongo is not defined :
+@(shell):1:1
+> mongodb --version
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:10
+> use contact
+switched to db contact
+> db
+contact
+> db.listecontacts.insert({nom:'lahmer',category:'fares',email:'fares@gmail.com',age:25})
+WriteResult({ "nInserted" : 1 })
+> db.listecontact.find().pretty()
+> db.listecontact.find().pretty()
+> db.listecontacts.find().pretty()
+{
+        "_id" : ObjectId("606839ac12bc06b2081a225e"),
+        "nom" : "lahmer",
+        "category" : "fares",
+        "email" : "fares@gmail.com",
+        "age" : 25
+}
+> db.listecontacts.insert({nom:'kefi',category:'seif',email:'seif@gmail.com',age:15})
+WriteResult({ "nInserted" : 1 })
+> db.listecontacts.find().pretty()
+{
+        "_id" : ObjectId("606839ac12bc06b2081a225e"),
+        "nom" : "lahmer",
+        "category" : "fares",
+        "email" : "fares@gmail.com",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("60683a7212bc06b2081a225f"),
+        "nom" : "kefi",
+        "category" : "seif",
+        "email" : "seif@gmail.com",
+        "age" : 15
+}
+> db.listecontacts.insert({nom:'fatnassi',category:'sarra',email:'sarra.f@gmail.com',age:15})
+WriteResult({ "nInserted" : 1 })
+> db.listecontacts.find().pretty()
+{
+        "_id" : ObjectId("606839ac12bc06b2081a225e"),
+        "nom" : "lahmer",
+        "category" : "fares",
+        "email" : "fares@gmail.com",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("60683a7212bc06b2081a225f"),
+        "nom" : "kefi",
+        "category" : "seif",
+        "email" : "seif@gmail.com",
+        "age" : 15
+}
+{
+        "_id" : ObjectId("60683a9512bc06b2081a2260"),
+        "nom" : "fatnassi",
+        "category" : "sarra",
+        "email" : "sarra.f@gmail.com",
+        "age" : 15
+}
+> db.listecontacts.insert({nom:'benyahya',category:'rym',age:4})
+WriteResult({ "nInserted" : 1 })
+> db.listecontacts.find().pretty()
+{
+        "_id" : ObjectId("606839ac12bc06b2081a225e"),
+        "nom" : "lahmer",
+        "category" : "fares",
+        "email" : "fares@gmail.com",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("60683a7212bc06b2081a225f"),
+        "nom" : "kefi",
+        "category" : "seif",
+        "email" : "seif@gmail.com",
+        "age" : 15
+}
+{
+        "_id" : ObjectId("60683a9512bc06b2081a2260"),
+        "nom" : "fatnassi",
+        "category" : "sarra",
+        "email" : "sarra.f@gmail.com",
+        "age" : 15
+}
+{
+        "_id" : ObjectId("60683acd12bc06b2081a2261"),
+        "nom" : "benyahya",
+        "category" : "rym",
+        "age" : 4
+}
+> db.listecontacts.insert({nom:'cherif',category:'sami',age:3})
+WriteResult({ "nInserted" : 1 })
+> db.listecontacts.find().pretty()
+{
+        "_id" : ObjectId("606839ac12bc06b2081a225e"),
+        "nom" : "lahmer",
+        "category" : "fares",
+        "email" : "fares@gmail.com",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("60683a7212bc06b2081a225f"),
+        "nom" : "kefi",
+        "category" : "seif",
+        "email" : "seif@gmail.com",
+        "age" : 15
+}
+{
+        "_id" : ObjectId("60683a9512bc06b2081a2260"),
+        "nom" : "fatnassi",
+        "category" : "sarra",
+        "email" : "sarra.f@gmail.com",
+        "age" : 15
+}
+{
+        "_id" : ObjectId("60683acd12bc06b2081a2261"),
+        "nom" : "benyahya",
+        "category" : "rym",
+        "age" : 4
+}
+{
+        "_id" : ObjectId("60683af412bc06b2081a2262"),
+        "nom" : "cherif",
+        "category" : "sami",
+        "age" : 3
+}
+> db.listecontacts.find()
+{ "_id" : ObjectId("606839ac12bc06b2081a225e"), "nom" : "lahmer", "category" : "fares", "email" : "fares@gmail.com", "age" : 25 }
+{ "_id" : ObjectId("60683a7212bc06b2081a225f"), "nom" : "kefi", "category" : "seif", "email" : "seif@gmail.com", "age" : 15 }
+{ "_id" : ObjectId("60683a9512bc06b2081a2260"), "nom" : "fatnassi", "category" : "sarra", "email" : "sarra.f@gmail.com", "age" : 15 }
+{ "_id" : ObjectId("60683acd12bc06b2081a2261"), "nom" : "benyahya", "category" : "rym", "age" : 4 }
+{ "_id" : ObjectId("60683af412bc06b2081a2262"), "nom" : "cherif", "category" : "sami", "age" : 3 }
+> db.contact.find({_id:606839ac12bc06b2081a225e})
+uncaught exception: SyntaxError: identifier starts immediately after numeric literal :
+@(shell):1:21
+> db.contact.find({ObjectId:606839ac12bc06b2081a225e})
+uncaught exception: SyntaxError: identifier starts immediately after numeric literal :
+@(shell):1:26
+> db.contact.find({ObjectId:606839ac12bc06b2081a225e},{nom:1})
+uncaught exception: SyntaxError: identifier starts immediately after numeric literal :
+@(shell):1:26
+> show.dbs
+uncaught exception: ReferenceError: show is not defined :
+@(shell):1:1
+> show dbs
+admin    0.000GB
+config   0.000GB
+contact  0.000GB
+local    0.000GB
+> use contact
+switched to db contact
+> db.contaclistet.find({ObjectId:606839ac12bc06b2081a225e},{nom:1})
+uncaught exception: SyntaxError: identifier starts immediately after numeric literal :
+@(shell):1:31
+> db.contactliste.find({ObjectId:606839ac12bc06b2081a225e},{nom:1})
+uncaught exception: SyntaxError: identifier starts immediately after numeric literal :
+@(shell):1:31
+> db.listecontacts.find({ObjectId:606839ac12bc06b2081a225e},{nom:1})
+uncaught exception: SyntaxError: identifier starts immediately after numeric literal :
+@(shell):1:32
+> db.listecontacts.find({ObjectId:606839ac12bc06b2081a225e}})
+uncaught exception: SyntaxError: identifier starts immediately after numeric literal :
+@(shell):1:32
+> db.listecontacts.find()
+{ "_id" : ObjectId("606839ac12bc06b2081a225e"), "nom" : "lahmer", "category" : "fares", "email" : "fares@gmail.com", "age" : 25 }
+{ "_id" : ObjectId("60683a7212bc06b2081a225f"), "nom" : "kefi", "category" : "seif", "email" : "seif@gmail.com", "age" : 15 }
+{ "_id" : ObjectId("60683a9512bc06b2081a2260"), "nom" : "fatnassi", "category" : "sarra", "email" : "sarra.f@gmail.com", "age" : 15 }
+{ "_id" : ObjectId("60683acd12bc06b2081a2261"), "nom" : "benyahya", "category" : "rym", "age" : 4 }
+{ "_id" : ObjectId("60683af412bc06b2081a2262"), "nom" : "cherif", "category" : "sami", "age" : 3 }
+> db.listecontacts.find({_Id:606839ac12bc06b2081a225e}})
+uncaught exception: SyntaxError: identifier starts immediately after numeric literal :
+@(shell):1:27
+> db.listecontacts.find({_id:606839ac12bc06b2081a225e}})
+uncaught exception: SyntaxError: identifier starts immediately after numeric literal :
+@(shell):1:27
+> db.listecontacts.find({_id:606839ac12bc06b2081a225e})
+uncaught exception: SyntaxError: identifier starts immediately after numeric literal :
+@(shell):1:27
+> db.listecontacts.find({_id:ObjectId("606839ac12bc06b2081a225e")})
+{ "_id" : ObjectId("606839ac12bc06b2081a225e"), "nom" : "lahmer", "category" : "fares", "email" : "fares@gmail.com", "age" : 25 }
+> db.listecontacts.find({age:{$gt:15}})
+{ "_id" : ObjectId("606839ac12bc06b2081a225e"), "nom" : "lahmer", "category" : "fares", "email" : "fares@gmail.com", "age" : 25 }
+> db.listecontacts.find({$and:[{age:{$gt:15}},{category:{$regex:".*ah.*"}}]).pretty()
+...
+... ^C
+
+> db.listecontacts.find({$and:[age:{$gt:18}},{category:{$regex:".*ah.*"}}]}).pretty()
+uncaught exception: SyntaxError: missing ] after element list :
+@(shell):1:32
+> db.listecontacts.find({$and:[{age:{$gt:18}},{category:{$regex:".*ah.*"}}]}).pretty()
+> db.listecontacts.find({$and:[{age:{$gt:18}},{category:{$regex:".*ah.*"}}]}).pretty()
+> db.listecontacts.find({age:{$gt:18},category:{$regex:"ah"}})
+> db.listecontacts.find({age:{$gt:18},category:{$regex:"ah"}})
+> show dbs
+admin    0.000GB
+config   0.000GB
+contact  0.000GB
+local    0.000GB
+> use contact
+switched to db contact
+> show collections
+listecontacts
+> db.listecontacts.find({age:{$gt:18},category:{$regex:"ah"}})
+> db.listecontacts.find().pretty()
+{
+        "_id" : ObjectId("606839ac12bc06b2081a225e"),
+        "nom" : "lahmer",
+        "category" : "fares",
+        "email" : "fares@gmail.com",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("60683a7212bc06b2081a225f"),
+        "nom" : "kefi",
+        "category" : "seif",
+        "email" : "seif@gmail.com",
+        "age" : 15
+}
+{
+        "_id" : ObjectId("60683a9512bc06b2081a2260"),
+        "nom" : "fatnassi",
+        "category" : "sarra",
+        "email" : "sarra.f@gmail.com",
+        "age" : 15
+}
+{
+        "_id" : ObjectId("60683acd12bc06b2081a2261"),
+        "nom" : "benyahya",
+        "category" : "rym",
+        "age" : 4
+}
+{
+        "_id" : ObjectId("60683af412bc06b2081a2262"),
+        "nom" : "cherif",
+        "category" : "sami",
+        "age" : 3
+}
+> db.listecontacts.find()
+{ "_id" : ObjectId("606839ac12bc06b2081a225e"), "nom" : "lahmer", "category" : "fares", "email" : "fares@gmail.com", "age" : 25 }
+{ "_id" : ObjectId("60683a7212bc06b2081a225f"), "nom" : "kefi", "category" : "seif", "email" : "seif@gmail.com", "age" : 15 }
+{ "_id" : ObjectId("60683a9512bc06b2081a2260"), "nom" : "fatnassi", "category" : "sarra", "email" : "sarra.f@gmail.com", "age" : 15 }
+{ "_id" : ObjectId("60683acd12bc06b2081a2261"), "nom" : "benyahya", "category" : "rym", "age" : 4 }
+{ "_id" : ObjectId("60683af412bc06b2081a2262"), "nom" : "cherif", "category" : "sami", "age" : 3 }
+> db.listecontacts.update({nom:'seif'},{$set:{nom:"anis"}})
+WriteResult({ "nMatched" : 0, "nUpserted" : 0, "nModified" : 0 })
+> db.listecontacts.find()
+{ "_id" : ObjectId("606839ac12bc06b2081a225e"), "nom" : "lahmer", "category" : "fares", "email" : "fares@gmail.com", "age" : 25 }
+{ "_id" : ObjectId("60683a7212bc06b2081a225f"), "nom" : "kefi", "category" : "seif", "email" : "seif@gmail.com", "age" : 15 }
+{ "_id" : ObjectId("60683a9512bc06b2081a2260"), "nom" : "fatnassi", "category" : "sarra", "email" : "sarra.f@gmail.com", "age" : 15 }
+{ "_id" : ObjectId("60683acd12bc06b2081a2261"), "nom" : "benyahya", "category" : "rym", "age" : 4 }
+{ "_id" : ObjectId("60683af412bc06b2081a2262"), "nom" : "cherif", "category" : "sami", "age" : 3 }
+> db.listecontacts.remove({age:{$lt:5}})
+WriteResult({ "nRemoved" : 2 })
+> db.listecontacts.find()
+{ "_id" : ObjectId("606839ac12bc06b2081a225e"), "nom" : "lahmer", "category" : "fares", "email" : "fares@gmail.com", "age" : 25 }
+{ "_id" : ObjectId("60683a7212bc06b2081a225f"), "nom" : "kefi", "category" : "seif", "email" : "seif@gmail.com", "age" : 15 }
+{ "_id" : ObjectId("60683a9512bc06b2081a2260"), "nom" : "fatnassi", "category" : "sarra", "email" : "sarra.f@gmail.com", "age" : 15 }
+> db.listecontacts.find().pretty()
+{
+        "_id" : ObjectId("606839ac12bc06b2081a225e"),
+        "nom" : "lahmer",
+        "category" : "fares",
+        "email" : "fares@gmail.com",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("60683a7212bc06b2081a225f"),
+        "nom" : "kefi",
+        "category" : "seif",
+        "email" : "seif@gmail.com",
+        "age" : 15
+}
+{
+        "_id" : ObjectId("60683a9512bc06b2081a2260"),
+        "nom" : "fatnassi",
+        "category" : "sarra",
+        "email" : "sarra.f@gmail.com",
+        "age" : 15
+}
+>
